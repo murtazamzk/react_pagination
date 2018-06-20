@@ -1,0 +1,170 @@
+body {
+  font-family: "Playfair Display", sans-serif;
+  color: #333;
+  background: #eaeaea;
+  padding: 4vh 3vw;
+}
+
+.container {
+  background: #fff;
+  min-height: calc(100vh - 8vh);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px 0;
+}
+@media (min-width: 560px) {
+  .container {
+    padding: 0;
+  }
+}
+
+#app {
+  width: 100%;
+}
+
+.btn {
+  font-weight: 300;
+  padding: 3vh 5vw;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  display: block;
+  margin: auto;
+}
+.btn--primary {
+  background: #4460b3;
+  color: #fff;
+}
+.btn:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  box-shadow: 0 0 20px #333;
+}
+.btn--arrow {
+  padding: 1vh 3vw;
+  border-radius: 5px;
+  color: transparent;
+  background: #446cb3 url('https://uploads.codesandbox.io/uploads/user/5574d77b-cf54-4e6e-8073-55f3cfdb4f46/tyox-arrowRight.svg') no-repeat center 3px;
+}
+.btn--arrow:first-child{
+  background-image: url('https://uploads.codesandbox.io/uploads/user/5574d77b-cf54-4e6e-8073-55f3cfdb4f46/k8Sb-arrowLeft.svg');
+}
+.btn--arrow:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  box-shadow: none;
+}
+.btn.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+.loader:after {
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  -webkit-animation: typing 1s linear infinite alternate;
+          animation: typing 1s linear infinite alternate;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+@-webkit-keyframes typing {
+  0% {
+    background-color: white;
+    box-shadow: 20px 0px 0px 0px rgba(255, 255, 255, 0.2), 40px 0px 0px 0px rgba(255, 255, 255, 0.2);
+  }
+  25% {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 20px 0px 0px 0px white, 40px 0px 0px 0px rgba(255, 255, 255, 0.2);
+  }
+  75% {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 20px 0px 0px 0px rgba(255, 255, 255, 0.2), 40px 0px 0px 0px white;
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 20px 0px 0px 0px rgba(255, 255, 255, 0.2), 40px 0px 0px 0px white;
+  }
+}
+
+@keyframes typing {
+  0% {
+    background-color: white;
+    box-shadow: 20px 0px 0px 0px rgba(255, 255, 255, 0.2), 40px 0px 0px 0px rgba(255, 255, 255, 0.2);
+  }
+  25% {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 20px 0px 0px 0px white, 40px 0px 0px 0px rgba(255, 255, 255, 0.2);
+  }
+  75% {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 20px 0px 0px 0px rgba(255, 255, 255, 0.2), 40px 0px 0px 0px white;
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 20px 0px 0px 0px rgba(255, 255, 255, 0.2), 40px 0px 0px 0px white;
+  }
+}
+.userlist {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.user {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 5px;
+  width: 40%;
+}
+@media (min-width: 768px) {
+  .user {
+    width: 20%;
+  }
+}
+.user h2 {
+  margin-bottom: 0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 300px;
+}
+.pagination .pageinput {
+  margin: 0 20px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #4460b3;
+  width: 100px;
+  font-family: sans-serif;
+}
+@media (min-width: 560px) {
+  .pagination .pageinput {
+    width: auto;
+  }
+}
